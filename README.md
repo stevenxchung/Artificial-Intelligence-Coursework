@@ -1,2 +1,2 @@
 # Artificial Intelligence Coursework
- Contains extracurricular coursework related to AI and Machine Learning
+Contains extracurricular coursework related to AI and Machine Learning

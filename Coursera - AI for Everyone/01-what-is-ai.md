@@ -50,3 +50,18 @@ AI can be broken up into two separate classifications:
 - What makes an machine learning problem easier?
   1. Learning a _simple_ concept (i.e., it only takes about one second of thought)
   2. Lots of data available
+
+## More examples of what machine learning can and cannot do
+
+- Example 1:
+  - Can do: take a picture of a car and use that to figure out how far away a car is
+  - Cannot do: take many pictures of people with hand gestures and figure out what their intention is
+- Example 2:
+  - Can do: diagnose pneumonia from 10,000 labeled images
+  - Cannot do: diagnose pneumonia from 10 images of a medical textbook chapter explaining pneumonia
+- Machine learning tends to work well when:
+  1. Learning a _simple_ concept
+  2. There are lots of data available
+- Machine learning tends to work poorly when:
+  1. Learning complex concepts from small amounts of data
+  2. It is asked to perform on new types of data

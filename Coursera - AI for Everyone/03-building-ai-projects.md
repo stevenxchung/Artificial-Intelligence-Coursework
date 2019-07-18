@@ -57,3 +57,16 @@ There are several steps to follow when building an AI project:
   - ML projects can be in-house or outsourced
   - DS projects are more commonly done in-house
   - Some things will be industry standard - avoid building those
+
+## Working with an AI team
+
+- How to work with an AI team?
+  - Specify your acceptance criteria, provide AI team a test set (dataset on which to measure their performance)
+- How AI teams think about data:
+  - Training set: dataset given to ML algorithm to learn _A_ to _B_ mapping
+  - Test set: dataset given to ML algorithm to test if _A_ to _B_ mapping is valid or acceptable
+- Pitfall: expecting 100% accuracy
+  - Limitations of ML
+  - Insufficient data
+  - Mislabeled data
+  - Ambiguous labels

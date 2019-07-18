@@ -28,3 +28,32 @@ There are several steps to follow when building an AI project:
   - Recruiting: optimize recruiting steps and automate resume screening
   - Marketing: A/B testing and customized recommendations
   - Agriculture: crop analytics and precision weed detection
+
+## How to choose an AI project
+
+- Gather AI knowledge and domain experts:
+  - AI experts: figures out what AI can do
+  - Domain experts: figures out what is valuable for your business
+- Brainstorming framework
+  - Think about automating tasks rather than automating jobs
+  - What are the main drivers of business value?
+  - What are the main pain points in your business?
+- You can make progress even without big data
+  - Having more data almost never hurts
+  - Data makes some businesses (like web search) defensible
+  - But with small datasets, you can still make progress
+- Due diligence on project:
+  - Technical diligence:
+    - Can AI system meet desired performance?
+    - How much data is needed?
+    - Engineering timeline
+  - Business diligence:
+    - Lower costs
+    - Increase revenue
+    - Launch new product or business
+  - Ethical diligence:
+    - Is what you are doing benefiting humanity and society?
+- Build vs buy:
+  - ML projects can be in-house or outsourced
+  - DS projects are more commonly done in-house
+  - Some things will be industry standard - avoid building those

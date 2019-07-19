@@ -50,3 +50,30 @@ How to build AI in your company?
   - One software engineer
   - One machine learning/data scientist
   - Nobody but yourself
+
+## AI Transformation Playbook
+
+- There are five steps to the AI Transformation Playbook:
+  1. Execute pilot projects to gain momentum
+     - More important for the initial project to succeed rather than be the most valuable
+     - Show traction within 6-12 months
+     - Can be in-house or outsourced
+  2. Build an in-house AI team
+     - Build a centralized AI team
+     - Take talent from AI team and matrix them into different business units
+  3. Provide broad AI training
+     - AI training should be given at each role (training will vary)
+  4. Develop an AI strategy
+     - Leverage AI to create an advantage specific to your industry sector
+     - Design strategy aligned with the _Virtuous Cycle of AI_
+     - Consider creating a data strategy
+       - Strategic data acquisition
+       - Unified data warehouse
+     - Create network effects and platform advantages
+       - In industries with _winner take all_ dynamics, AI can be an accelerator
+  5. Develop internal and external communications
+     - Investor relations
+     - Government relations
+     - Consumer/user education
+     - Talent/recruitment
+     - Internal communications

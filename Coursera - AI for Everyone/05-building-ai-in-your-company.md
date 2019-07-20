@@ -77,3 +77,30 @@ How to build AI in your company?
      - Consumer/user education
      - Talent/recruitment
      - Internal communications
+
+## AI pitfalls to avoid
+
+- Don't:
+  - Expect AI to solve everything
+  - Hire 2-3 ML engineers and count solely on them to come up with use cases
+  - Expect the AI project to work the first time
+  - Expect traditional planning processes to apply without changes
+  - Think you need superstar AI engineers before you can do anything
+- Do:
+  - Be realistic about what AI can and cannot do given limitations of technology, data, and engineering resources
+  - Pair engineering talent with business talent and work cross-functionally to find feasible and valuable projects
+  - Plan for AI development to be an iterative process, with multiple attempts needed to succeed
+  - Work with AI team to establish timeline estimates, milestones, KPIs, etc.
+
+## Taking your first step in AI
+
+- Some initial steps you can take:
+  - Get friends to learn about AI
+    - This course
+    - Reading group
+  - Start brainstorming projects
+    - No project is too small
+  - Hire a few ML/DS people to help
+  - Hire or appoint an AI leader (VP AI, CAIO, etc.)
+  - Discuss with CEO/Board possibilities of AI Transformation
+    - Will your company be much more valuable and/or more effective if it were good at AI?

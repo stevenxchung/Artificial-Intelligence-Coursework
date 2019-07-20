@@ -12,7 +12,7 @@
 
 3. What are the key steps of a Data Science project? Answer: _All of the above_
 
-4. Machine Learning programs can help: (select all that apply) Answer:
+4. Machine Learning programs can help: (select all that apply)
 
    - _Automate resume screening_
    - _Customize product recommendations_
@@ -21,7 +21,7 @@
 
 5. Unless you have a huge dataset (“Big Data”), it is generally not worth attempting machine learning or data science projects on your problem. Answer: _False_
 
-6. Say you want to build an AI system to help recruiters with automated resume screening. Which of these steps might be involved in “technical diligence” process? (Select all that apply.) Answer:
+6. Say you want to build an AI system to help recruiters with automated resume screening. Which of these steps might be involved in “technical diligence” process? (Select all that apply.)
 
    - _Making sure that an AI system can meet the desired performance_
    - _Defining an engineering timeline_
@@ -29,12 +29,12 @@
 
 7. Which of these statements about “business diligence” do you agree with? Answer: _Business diligence is the process of ensuring that the AI technology, if it is built, is valuable for your business._
 
-8. You want to use supervised learning for automated resume screening, as in the example above. Which of the following statements about the Training Set are true? (Select all that apply.) Answer:
+8. You want to use supervised learning for automated resume screening, as in the example above. Which of the following statements about the Training Set are true? (Select all that apply.)
 
    - _It should give examples of both the input A (resume) and the desired output B (whether to move forward with a candidate)._
    - _It will be used by the AI team to train the supervised learning algorithm._
 
-9. For your automated resume screening application, you are now providing a Test Set to the AI team. Which of the following statements about the Test Set are true? (Select all that apply.) Answer:
+9. For your automated resume screening application, you are now providing a Test Set to the AI team. Which of the following statements about the Test Set are true? (Select all that apply.)
 
    - _It will be used by the AI team to evaluate the performance of the algorithm._
    - _It should give examples of both the input A (resume) and the desired output B (whether to move forward with a candidate)_

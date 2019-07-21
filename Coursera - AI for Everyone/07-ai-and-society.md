@@ -9,3 +9,45 @@ We will cover the following topics:
     - Adversarial attacks
   - AI, developing economies, and jobs
 - Conclusion
+
+## A realistic view of AI
+
+- Goldilocks rule for AI:
+  - Too optimistic: sentient/super-intelligent AI killer robots coming soon
+  - Too pessimistic: AI cannot do everything, so an AI winter is coming
+  - Just right: AI cannot do everything, but will transform industries
+- Limitations of AI:
+  - Performance limitations
+  - Explaining is hard (but sometimes doable)
+  - Biased AI through biased data
+  - Adversarial attacks on AI
+
+## Discrimination/Bias
+
+- AI learning unhealthy stereotypes:
+  - The way a ML algorithm stores words and relationships can lead to bias
+- Why bias matters:
+  - Hiring tool that discriminated against women
+  - Facial recognition working better for light-skinned than dark-skinned individuals
+  - Bank loan approvals
+  - Toxic effect of reinforcing unhealthy stereotypes
+- Combating bias:
+  - Technical solutions:
+    - E.g., "zero-out" the bias in words
+    - Use less biased and/or more inclusive data
+  - Transparency and/or auditing processes
+  - Diverse workforce
+    - Creates less biased applications
+
+## Adversarial attacks on AI
+
+- Examples:
+  - Hummingbird + minor perturbation -> hammer
+  - Hare + minor perturbation -> desk
+- Physical attacks:
+  - Classifies random person as a well-known actress
+  - Fails to see stop sign when characters are applied to stop sign
+  - Banana incorrectly identified as a toaster when sticker is placed near banana
+- Adversarial defense:
+  - Defenses do exist, but incur some cost
+  - Similar to spam vs. anti-spam, we man be in an arms races for some applications

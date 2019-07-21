@@ -51,3 +51,43 @@ We will cover the following topics:
 - Adversarial defense:
   - Defenses do exist, but incur some cost
   - Similar to spam vs. anti-spam, we man be in an arms races for some applications
+
+## Adverse uses of AI
+
+- DeepFakes
+  - Synthesize video of people doing things they never did
+- Undermining of democracy and privacy
+  - Oppressive surveillance
+- Generating fake comments
+- Spam vs. anti-spam and fraud vs. anti-fraud
+
+## AI and developing economies
+
+- Developing economies
+  - _Leapfrog_
+  - Mobile phones
+  - Mobile payments
+  - Online education
+- How developing economies can build AI
+  - US and China are leading, but all AI communities are still immature
+  - Focus on AI to strengthen a country's vertical industries
+  - Public-private partnerships to accelerate development
+  - Invest in education
+
+## AI and jobs
+
+- AI's impact on jobs worldwide:
+  - McKinsey estimates that jobs displaced by 2030 will be around 400-800M
+  - However, jobs created by 2030 will be around 555-890M
+- Some solutions:
+  - Conditional basic income: provide a safety net but incentivize learning
+  - Lifelong learning
+  - Political solutions
+
+## Conclusion
+
+- What you've learned
+  - What is AI?
+  - Building AI projects
+  - Building AI in your company
+  - AI and society

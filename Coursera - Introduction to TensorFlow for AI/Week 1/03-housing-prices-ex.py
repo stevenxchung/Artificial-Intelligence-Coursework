@@ -11,9 +11,13 @@ Hint: Your network might work better if you scale the house price down. You don'
 import tensorflow as tf
 import numpy as np
 from tensorflow import keras
-model = # Your Code Here#
-model.compile(# Your Code Here#)
-xs = # Your Code Here#
-ys = # Your Code Here#
-model.fit(# Your Code here#)
+
+model = keras.Sequential([keras.layers.Dense(units = 1, input_shape = [1])])
+model.compile(optimizer = 'sgd', loss = 'mean_squared_error')
+
+xs = np.array([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], dtype = float)
+ys = np.array([100000.00, 150000.00, 200000.00, 250000.00, 300000.00, 350000.00], dtype = float)
+
+model.fit(xs, ys, epochs = 300)
+
 print(model.predict([7.0]))

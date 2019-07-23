@@ -8,16 +8,21 @@ How would you create a neural network that learns this relationship so that it w
 Hint: Your network might work better if you scale the house price down. You don't have to give the answer 400...it might be better to create something that predicts the number 4, and then your answer is in the 'hundreds of thousands' etc.
 '''
 
+# Initialize imports
 import tensorflow as tf
 import numpy as np
 from tensorflow import keras
 
+# Initialize model, loss, and optimize functions
 model = keras.Sequential([keras.layers.Dense(units = 1, input_shape = [1])])
 model.compile(optimizer = 'sgd', loss = 'mean_squared_error')
 
+# Initialize training set
 xs = np.array([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], dtype = float)
 ys = np.array([100000.00, 150000.00, 200000.00, 250000.00, 300000.00, 350000.00], dtype = float)
 
+# Train model with 300 iterations
 model.fit(xs, ys, epochs = 300)
 
-print(model.predict([7.0]))
+# Print result
+print(model.predict([7.0])) # About $407705.90

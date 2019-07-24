@@ -2,7 +2,7 @@
 
 In this first week we go over the basics of machine learning and TensorFlow.
 
-## A primer in machine learning
+## A Primer in Machine Learning
 
 - Traditional programming:
   - Input:
@@ -15,7 +15,7 @@ In this first week we go over the basics of machine learning and TensorFlow.
     - Data
   - Output: rules
 
-## The _Hello World_ of neural networks
+## The _Hello World_ of Neural Networks
 
 - Machine learning is all about a computer learning the patterns that distinguishes things
 - We can write a simple _Hello World_ model for a neural network with one neuron (the most basic neural network) with the following:

@@ -1,4 +1,4 @@
-# A New Programming Paradigm
+# Week 1 - A New Programming Paradigm
 
 In this first week we go over the basics of machine learning and TensorFlow
 

@@ -78,19 +78,44 @@ class myCallback(tf.keras.callbacks.Callback):
       self.model.stop_training = True
 ```
 
-- Now we have the callback we can change add the following to the original code:
+- Now we have the callback defined, we modify the original code as:
 
 ```python
-# Initialize callback
+# Initialize imports
+import tensorflow as tf
+print(tf.__version__)
 
+# Define callback
+class myCallback(tf.keras.callbacks.Callback):
+  def on_epoch_end(self, epoch, logs={}):
+    if(logs.get('acc')>0.9):
+      print("\nReached 90% accuracy so cancelling training!")
+      self.model.stop_training = True
+
+# Load training data
+mnist = tf.keras.datasets.fashion_mnist
+(x_train, y_train),(x_test, y_test) = mnist.load_data()
+
+# Normalize data
+x_train, x_test = x_train / 255.0, x_test / 255.0
+
+# Initialize callback
 callbacks = myCallback()
 
-# ...
+# Define model
+model = tf.keras.models.Sequential([
+  tf.keras.layers.Flatten(input_shape=(28, 28)),
+  tf.keras.layers.Dense(512, activation=tf.nn.relu),
+  tf.keras.layers.Dense(10, activation=tf.nn.softmax)
+])
 
 # Compile and train the model
-model.compile(optimizer = tf.train.AdamOptimizer(),
-              loss = 'sparse_categorical_crossentropy',
-              metrics = ['accuracy'])
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
 
-model.fit(training_images, training_labels, epochs = 5, callbacks = [callbacks])
+model.fit(x_train, y_train, epochs=10, callbacks=[callbacks])
+
+# Evaluate model
+model.evaluate(test_images, test_labels)
 ```

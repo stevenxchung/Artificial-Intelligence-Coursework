@@ -17,3 +17,18 @@ fashion_mnist = keras.datasets.fashion_mnist
 ```
 
 - In the Fashion MNIST dataset, 60K images will be used to train the model and 10K images (images not previously seen) will be used to test the model
+
+## Coding a Computer Vision Neural Network
+
+- Below is an example of a neural network with multiple layers, where the middle layer acts as the hidden layer with 128 neurons:
+
+```python
+model = keras.Sequential([
+  keras.layers.Flatten(input_shape = (28, 28)),
+  keras.layers.Dense(128, activiation = tf.nn.relu),
+  keras.layers.Dense(10, activation = tf.nn.softmax)
+])
+```
+
+- We now have 10 neurons in the model since we have 10 classes of clothing in the dataset
+- Since our images are 28 x 28, the line `keras.layers.Flatten(input_shape = (28, 28))` flattens those pixels into a linear array

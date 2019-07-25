@@ -32,3 +32,65 @@ model = keras.Sequential([
 
 - We now have 10 neurons in the model since we have 10 classes of clothing in the dataset
 - Since our images are 28 x 28, the line `keras.layers.Flatten(input_shape = (28, 28))` flattens those pixels into a linear array
+
+## Using Callbacks to Control Training
+
+- How can we use callbacks to stop training when desired loss/accuracy is reached? Let's examine the following:
+
+```python
+# Initialize imports
+import tensorflow as tf
+print(tf.__version__)
+
+# Load training data
+mnist = tf.keras.datasets.fashion_mnist
+(training_images, training_labels), (test_images, test_labels) = mnist.load_data()
+
+# Normalize data
+training_images  = training_images / 255.0
+test_images = test_images / 255.0
+
+# Define model
+model = tf.keras.models.Sequential([
+  tf.keras.layers.Flatten(),
+  tf.keras.layers.Dense(128, activation = tf.nn.relu),
+  tf.keras.layers.Dense(10, activation = tf.nn.softmax)
+])
+
+# Compile and train the model
+model.compile(optimizer = tf.train.AdamOptimizer(),
+              loss = 'sparse_categorical_crossentropy',
+              metrics = ['accuracy'])
+
+model.fit(training_images, training_labels, epochs = 5)
+
+# Evaluate model
+model.evaluate(test_images, test_labels)
+```
+
+- Where we define `model.fit(training_images, training_labels, epochs = 5)` we can write a callback to monitor loss and cancel when loss is acceptable:
+
+```python
+class myCallback(tf.keras.callbacks.Callback):
+  def on_epoch_end(self, epoch, logs = {}):
+    if (logs.get('loss') < 0.4):
+      print("\nLoss is low so cancelling training!")
+      self.model.stop_training = True
+```
+
+- Now we have the callback we can change add the following to the original code:
+
+```python
+# Initialize callback
+
+callbacks = myCallback()
+
+# ...
+
+# Compile and train the model
+model.compile(optimizer = tf.train.AdamOptimizer(),
+              loss = 'sparse_categorical_crossentropy',
+              metrics = ['accuracy'])
+
+model.fit(training_images, training_labels, epochs = 5, callbacks = [callbacks])
+```

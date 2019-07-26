@@ -87,8 +87,8 @@ print(tf.__version__)
 
 # Define callback
 class myCallback(tf.keras.callbacks.Callback):
-  def on_epoch_end(self, epoch, logs={}):
-    if(logs.get('acc')>0.9):
+  def on_epoch_end(self, epoch, logs = {}):
+    if(logs.get('acc') > 0.9):
       print("\nReached 90% accuracy so cancelling training!")
       self.model.stop_training = True
 
@@ -104,17 +104,17 @@ callbacks = myCallback()
 
 # Define model
 model = tf.keras.models.Sequential([
-  tf.keras.layers.Flatten(input_shape=(28, 28)),
-  tf.keras.layers.Dense(512, activation=tf.nn.relu),
-  tf.keras.layers.Dense(10, activation=tf.nn.softmax)
+  tf.keras.layers.Flatten(input_shape = (28, 28)),
+  tf.keras.layers.Dense(512, activation = tf.nn.relu),
+  tf.keras.layers.Dense(10, activation = tf.nn.softmax)
 ])
 
 # Compile and train the model
-model.compile(optimizer='adam',
-              loss='sparse_categorical_crossentropy',
-              metrics=['accuracy'])
+model.compile(optimizer = 'adam',
+              loss = 'sparse_categorical_crossentropy',
+              metrics = ['accuracy'])
 
-model.fit(x_train, y_train, epochs=10, callbacks=[callbacks])
+model.fit(x_train, y_train, epochs = 10, callbacks  =[callbacks])
 
 # Evaluate model
 model.evaluate(test_images, test_labels)

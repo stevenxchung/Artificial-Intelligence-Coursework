@@ -1,4 +1,4 @@
-# Week 2
+# Week 2 - Introduction to Computer Vision
 
 Previously, we saw that we could use machine learning, data, and labels, and have a computer figure out the rules. This week we will go into applying this concept to computer vision.
 

@@ -6,25 +6,40 @@ I've started the code for you -- you need to finish it!
 When 99.8% accuracy has been hit, you should print out the string "Reached 99.8% accuracy so cancelling training!"
 '''
 
+# Initialize imports
 import tensorflow as tf
+print(tf.__version__)
 
-# YOUR CODE STARTS HERE
+# Define callback
+class myCallback(tf.keras.callbacks.Callback):
+  def on_epoch_end(self, epoch, logs = {}):
+    if (logs.get('acc') >= 0.998):
+      print("\nReached 99.8% accuracy so cancelling training!")
+      self.model.stop_training = True
 
-# YOUR CODE ENDS HERE
+# Load training data
+mnist = tf.keras.datasets.fashion_mnist
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
 
-mnist = tf.keras.datasets.mnist
-(training_images, training_labels), (test_images, test_labels) = mnist.load_data()
+# Normalize data
+x_train, x_test = x_train / 255.0, x_test / 255.0
 
-# YOUR CODE STARTS HERE
+# Initialize callback
+callbacks = myCallback()
 
-# YOUR CODE ENDS HERE
-
+# Define model
 model = tf.keras.models.Sequential([
-    # YOUR CODE STARTS HERE
-
-    # YOUR CODE ENDS HERE
+  tf.keras.layers.Flatten(input_shape = (28, 28)),
+  tf.keras.layers.Dense(512, activation = tf.nn.relu),
+  tf.keras.layers.Dense(10, activation = tf.nn.softmax)
 ])
 
-# YOUR CODE STARTS HERE
+# Compile and train the model
+model.compile(optimizer = 'adam',
+              loss = 'sparse_categorical_crossentropy',
+              metrics = ['accuracy'])
 
-# YOUR CODE ENDS HERE
+model.fit(x_train, y_train, epochs = 10, callbacks = [callbacks])
+
+# Evaluate model
+model.evaluate(x_test, y_test)

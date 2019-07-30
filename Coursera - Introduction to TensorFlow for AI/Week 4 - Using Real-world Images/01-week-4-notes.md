@@ -34,3 +34,23 @@ validation_generator = test_datagen.flow_from_directory(
 - `target_size` resizes the images as they are loaded
 - `batch_size` specifies the size of the batch of images during loading
 - `class_mode` allows us to specify if the class of data is binary (e.g., horse vs humans) or another class
+
+## Definding a ConvNet to use Complex Images
+
+- A ConvNet is a model that has more than one CNN applied to it, below is an example:
+
+```python
+model = tf.keras.models.Sequential([
+  tf.keras.layers.Conv2D(16, (3, 3), activation = 'relu', input_shape = (300, 300, 3)),
+  tf.keras.layers.MaxPooling2D(2, 2),
+  tf.keras.layers.Conv2D(32, (3, 3), activation = 'relu'),
+  tf.keras.layers.MaxPooling2D(2, 2),
+  tf.keras.layers.Conv2D(64, (3, 3), activation = 'relu'),
+  tf.keras.layers.MaxPooling2D(2, 2),
+  tf.keras.layers.Flatten(),
+  tf.keras.layers.Dense(512, activation = 'relu'),
+  tf.keras.layers.Dense(1, activation = 'sigmoid')
+])
+```
+
+- In the above code, the output layer has changed from `softmax` (one neuron per class) to `sigmoid` (one neuron for two classes) which is great for binary classification

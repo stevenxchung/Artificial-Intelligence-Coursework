@@ -54,3 +54,60 @@ model = tf.keras.models.Sequential([
 ```
 
 - In the above code, the output layer has changed from `softmax` (one neuron per class) to `sigmoid` (one neuron for two classes) which is great for binary classification
+
+## Training the ConvNet with fit_generator
+
+- When training and compiling the ConvNet the steps vary from before:
+
+```python
+from tensorflow.keras.optimizers import RMSprop
+
+model.compile(
+  loss = 'binary_crossentropy',
+  optimizer = RMSprop(lr = 0.001),
+  metrics = ['acc'])
+```
+
+- We update `loss` to `binary_crossentropy` since we are training a binary model
+- In addition, the `optimizer` is now using `RMSprop` which allows us to adjust the learning rate to experiment with performance
+- To train the model we do the following:
+
+```python
+history = model.fit_generator(
+  train_generator,
+  steps_per_epoch = 8,
+  epochs = 15,
+  validation_data = validation_generator,
+  validation_steps = 8,
+  verbose = 2)
+```
+
+- We use `model.fit_generator` since we are using a generator instead of datasets
+- `steps_per_epoch` specifies how many batches are needed, in this case we need 8 since 8 times 128 gives us 1024 images which is the size of the training directory
+- Similarly, `validation_steps` specifies how many batches of validation are needed, in this case we need 8 since 8 times 32 gives us 256 test images
+- `verbose` allows us to adjust the amount of code displayed during training
+- Once the model is trained, we want to do prediction with the model as follows:
+
+```python
+import numpy as np
+from google.colab import files
+from keras.preprocessing import image
+
+uploaded = files.upload()
+
+for fn in uploaded.keys():
+
+  # Predicting images
+  path = '/content/' + fn
+  img = image.load_img(path, target_size(300, 300))
+  x = image.img_to_array(img)
+  x = np.expand_dims(x, axis = 0)
+
+  images = np.vstack([x])
+  classes = model.predict(images, batch_size = 10)
+  print(classes[0])
+  if classes[0] > 0.5:
+    print(fn + " is a human")
+  else:
+    print(fn + " is a horse)
+```

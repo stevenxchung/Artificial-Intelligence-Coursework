@@ -1,4 +1,4 @@
-# Week 3
+# Week 3 Quiz
 
 1. What is a Convolution? Answer: _A technique to isolate features in images_
 

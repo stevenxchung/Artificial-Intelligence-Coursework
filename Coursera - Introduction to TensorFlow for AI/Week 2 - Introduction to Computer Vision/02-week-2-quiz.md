@@ -1,4 +1,4 @@
-# Week 2
+# Week 2 Quiz
 
 1. What’s the name of the dataset of Fashion images used in this week’s code? Answer: _Fashion MNIST_
 
